@@ -21,8 +21,7 @@ public class newNote extends HttpServlet {
 
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/evernoteDB",
-                    "evernoteDB", "0633739768z");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/evernoteDB");
 
             Statement st = con.createStatement();
 
