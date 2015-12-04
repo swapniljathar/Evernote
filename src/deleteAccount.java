@@ -19,8 +19,7 @@ public class deleteAccount extends HttpServlet {
 
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/evernoteDB",
-                    "evernoteDB", "0633739768z");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/evernoteDB");
 
             Statement st = conn.createStatement();
             st.executeUpdate("DELETE FROM members WHERE userID = '" + value + "'");
